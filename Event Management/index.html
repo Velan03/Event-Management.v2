@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Culture Vibe Events - Your premier event management partner for corporate events, weddings, and social gatherings">
+    <link rel="shortcut icon" href="WEB-IMAGE/website-logo.png" type="image/jpg">
+    <title>Culture Vibe Events</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Visitor Counter (Hidden) -->
+    <div id="visitorCounter" class="visitor-counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="counter-item">
+                        <i class="bi bi-people-fill"></i>
+                        <div>
+                            <h5>Total Visitors</h5>
+                            <span id="totalVisitors">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="counter-item">
+                        <i class="bi bi-person-check-fill"></i>
+                        <div>
+                            <h5>Logged In Users</h5>
+                            <span id="loggedInUsers">0</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="toggleCounter" class="toggle-counter-btn">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <button id="showCounter" class="show-counter-btn">
+        <i class="bi bi-graph-up"></i> Stats
+    </button>
+
+    <!-- User Status Indicator -->
+    <div id="userStatusIndicator" class="user-status-indicator">
+        <div class="container">
+            <p><i class="bi bi-person-circle me-2"></i><span id="userStatusText">Guest</span></p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar py-2 text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 theme-text">
+                        <h1 class="mb-0 fs-4" data-aos="fade-right" data-aos-duration="1000">
+                            <i class="bi bi-geo-alt-fill me-2"></i>Culture Vibe Events
+                        </h1>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end justify-content-center">
+                            <ul class="list-inline mb-0 me-3 social-icons" data-aos="fade-left" data-aos-duration="1000">
+                                <li class="list-inline-item"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a></li>
+                            </ul>
+                            <ul class="list-inline mb-0 contact-info" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                                <li class="list-inline-item"><a href="tel:+917527528433"><i class="bi bi-telephone-fill me-1"></i>+91 752 752 8433</a></li>
+                                <li class="list-inline-item"><a href="mailto:info@culturevibe.com"><i class="bi bi-envelope-fill me-1"></i>Email</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0" id="mainNav">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="./WEB-IMAGE/vibslogo.png" alt="Culture Vibe Events Logo" height="50">
+                </a>
+
+                <!-- Navbar Toggler for Mobile -->
+                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links & Buttons -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav" data-aos="fade-down" data-aos-duration="1000">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactus">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right-side buttons (Login, Signup, Theme Toggle) -->
+                    <div class="d-flex align-items-center auth-buttons" data-aos="fade-left" data-aos-duration="1000">
+                        <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal" id="loginBtn">
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                        </button>
+                        <button class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#signupModal" id="signupBtn">
+                            <i class="bi bi-person-plus me-1"></i> Sign Up
+                        </button>
+                        <button class="btn btn-danger me-3 d-none" id="logoutBtn">
+                            <i class="bi bi-box-arrow-right me-1"></i> Logout
+                        </button>
+
+                        <!-- Theme Toggle Button -->
+                        <button id="themeToggle" class="btn btn-secondary" aria-label="Toggle dark mode">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="display-4 fw-bold text-white animated-text" data-aos="fade-up" data-aos-duration="1200">Creating Memorable Events</h2>
+                        <p class="lead text-white" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">We specialize in planning and executing flawless events that leave lasting impressions.</p>
+                        <div class="mt-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                            <a href="#services" class="btn btn-primary btn-lg me-2 pulse-btn">Our Services</a>
+                            <a href="#contactus" class="btn btn-outline-light btn-lg">Contact Us</a>
+                        </div>
+                        <div class="event-countdown mt-5" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                            <h3 class="text-white mb-3">Next Event Starting In</h3>
+                            <div class="countdown-container">
+                                <div class="countdown-item">
+                                    <span id="days">00</span>
+                                    <p>Days</p>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="hours">00</span>
+                                    <p>Hours</p>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="minutes">00</span>
+                                    <p>Minutes</p>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="seconds">00</span>
+                                    <p>Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-particles" id="particles-js"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About Us</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Learn more about our company and our mission</p>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="about-image-container">
+                            <img src="./WEB-IMAGE/main home.jpg" alt="About Our Company" class="img-fluid rounded shadow">
+                            <div class="experience-badge">
+                                <span>10+</span>
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left" data-aos-duration="1200">
+                        <h3>Your Premier Event Management Partner</h3>
+                        <p>With over 10 years of experience in the industry, we've successfully planned and executed hundreds of events ranging from intimate gatherings to large-scale corporate conferences.</p>
+                        <p>Our team of dedicated professionals is committed to turning your vision into reality, handling every detail with precision and care.</p>
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center mb-3 feature-item">
+                                    <i class="bi bi-check-circle-fill me-2 fs-4"></i>
+                                    <span>Professional Team</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3 feature-item">
+                                    <i class="bi bi-check-circle-fill me-2 fs-4"></i>
+                                    <span>Creative Solutions</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center mb-3 feature-item">
+                                    <i class="bi bi-check-circle-fill me-2 fs-4"></i>
+                                    <span>Attention to Detail</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3 feature-item">
+                                    <i class="bi bi-check-circle-fill me-2 fs-4"></i>
+                                    <span>Customer Satisfaction</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-container mt-4">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h4 class="counter" data-count="500">0</h4>
+                                        <p>Events</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h4 class="counter" data-count="120">0</h4>
+                                        <p>Clients</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h4 class="counter" data-count="15">0</h4>
+                                        <p>Awards</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-5 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Our Services</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Comprehensive event management solutions for every occasion</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="card h-100 service-card corporate-bg">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="bi bi-calendar-event fs-1"></i>
+                                </div>
+                                <div class="text-white position-relative z-1">
+                                    <h4 class="card-title">Corporate Events</h4>
+                                    <p class="card-text">
+                                        Conferences, seminars, team building activities, and product launches designed to meet your business objectives.
+                                    </p>
+                                    <button class="btn btn-light mt-3 service-link" data-service="corporate">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="card h-100 service-card socialgatherings-bg">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="bi bi-people fs-1"></i>
+                                </div>
+                                <div class="text-white position-relative z-1">
+                                    <h4 class="card-title">Social Gatherings</h4>
+                                    <p class="card-text">Birthday parties, anniversaries, reunions, and other special occasions that create lasting memories.</p>
+                                    <button class="btn btn-light mt-3 service-link" data-service="social">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="card h-100 service-card wedding-bg">
+                            <div class="card-body text-center p-4 position-relative">
+                                <div class="service-icon mb-3">
+                                    <i class="bi bi-heart fs-1"></i>
+                                </div>
+                                <div class="text-white position-relative z-1">
+                                    <h4 class="card-title">Wedding Planning</h4>
+                                    <p class="card-text">Comprehensive wedding planning services from engagement to reception, tailored to your unique love story.</p>
+                                    <button class="btn btn-light mt-3 service-link" data-service="wedding">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="card h-100 service-card entertainment-bg">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="bi bi-music-note-beamed fs-1"></i>
+                                </div>
+                                <div class="text-white position-relative z-1">
+                                    <h4 class="card-title">Entertainment</h4>
+                                    <p class="card-text">Access to top-tier performers, musicians, DJs, and entertainers to elevate your event experience.</p>
+                                    <button class="btn btn-light mt-3 service-link" data-service="entertainment">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="card h-100 service-card photography-bg">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="bi bi-camera fs-1"></i>
+                                </div>
+                                <div class="text-white position-relative z-1">
+                                    <h4 class="card-title">Photography & Videography</h4>
+                                    <p class="card-text">Professional documentation of your event with high-quality photos and videos to preserve the memories.</p>
+                                    <button class="btn btn-light mt-3 service-link" data-service="photography">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="card h-100 service-card catering-bg">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-3">
+                                    <i class="bi bi-cup-hot fs-1"></i>
+                                </div>
+                                <div class="text-white position-relative z-1">
+                                    <h4 class="card-title">Catering Services</h4>
+                                    <p class="card-text">Delicious menu options from top caterers, customized to your preferences and dietary requirements.</p>
+                                    <button class="btn btn-light mt-3 service-link" data-service="catering">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-5 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Event Gallery</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Glimpses of our successful events</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Filter Buttons -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <div class="gallery-filter" data-aos="fade-up" data-aos-duration="800">
+                            <button class="btn btn-filter active" data-filter="all">All</button>
+                            <button class="btn btn-filter" data-filter="corporate">Corporate</button>
+                            <button class="btn btn-filter" data-filter="wedding">Wedding</button>
+                            <button class="btn btn-filter" data-filter="social">Social</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 gallery-container">
+                    <div class="col-lg-4 col-md-6 col-12 gallery-item" data-category="corporate" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="gallery-card">
+                            <img src="./WEB-IMAGE/Event Gallery/Corporate Event.jpg" alt="Corporate Event" class="img-fluid rounded">
+                            <div class="overlay">
+                                <div>
+                                    <h5>Corporate Event</h5>
+                                    <a href="./WEB-IMAGE/Event Gallery/Corporate Event.jpg" class="gallery-view" data-gallery="event-gallery">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 gallery-item" data-category="wedding" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="gallery-card">
+                            <img src="./WEB-IMAGE/Event Gallery/Wedding.jpeg" alt="Wedding" class="img-fluid rounded">
+                            <div class="overlay">
+                                <div>
+                                    <h5>Wedding</h5>
+                                    <a href="./WEB-IMAGE/Event Gallery/Wedding.jpeg" class="gallery-view" data-gallery="event-gallery">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 gallery-item" data-category="social" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="gallery-card">
+                            <img src="./WEB-IMAGE/Event Gallery/Birthday Party.jpg" alt="Birthday Party" class="img-fluid rounded">
+                            <div class="overlay">
+                                <div>
+                                    <h5>Birthday Party</h5>
+                                    <a href="./WEB-IMAGE/Event Gallery/Birthday Party.jpg" class="gallery-view" data-gallery="event-gallery">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 gallery-item" data-category="corporate" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="gallery-card">
+                            <img src="./WEB-IMAGE/Event Gallery/Conference.jpg" alt="Conference" class="img-fluid rounded">
+                            <div class="overlay">
+                                <div>
+                                    <h5>Conference</h5>
+                                    <a href="./WEB-IMAGE/Event Gallery/Conference.jpg" class="gallery-view" data-gallery="event-gallery">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 gallery-item" data-category="corporate" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="gallery-card">
+                            <img src="./WEB-IMAGE/Event Gallery/Product Launch.jpg" alt="Product Launch" class="img-fluid rounded">
+                            <div class="overlay">
+                                <div>
+                                    <h5>Product Launch</h5>
+                                    <a href="./WEB-IMAGE/Event Gallery/Product Launch.jpg" class="gallery-view" data-gallery="event-gallery">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 gallery-item" data-category="social" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="gallery-card">
+                            <img src="./WEB-IMAGE/Event Gallery/Gala Dinner.jpg" alt="Gala Dinner" class="img-fluid rounded">
+                            <div class="overlay">
+                                <div>
+                                    <h5>Gala Dinner</h5>
+                                    <a href="./WEB-IMAGE/Event Gallery/Gala Dinner.jpg" class="gallery-view" data-gallery="event-gallery">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-5 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Testimonials</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">What our clients say about us</p>
+                    </div>
+                </div>
+
+                <!-- Swiper Testimonial Slider -->
+                <div class="swiper testimonial-swiper" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="card-body p-4">
+                                    <div class="testimonial-rating mb-3">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="card-text">"The team at Culture Vibe Events went above and beyond for our corporate conference. Every detail was handled with precision, and our attendees were thoroughly impressed."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://via.placeholder.com/50x50" alt="John Smith" class="rounded-circle">
+                                        <div>
+                                            <h5>John Smith</h5>
+                                            <p>CEO, Tech Solutions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="card-body p-4">
+                                    <div class="testimonial-rating mb-3">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="card-text">"Our wedding day was absolutely perfect thanks to the incredible planning and execution by the Culture Vibe Events team. They turned our vision into reality and handled every detail."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://via.placeholder.com/50x50" alt="Sarah Johnson" class="rounded-circle">
+                                        <div>
+                                            <h5>Sarah Johnson</h5>
+                                            <p>Bride</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="card-body p-4">
+                                    <div class="testimonial-rating mb-3">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="card-text">"The product launch event organized by Culture Vibe Events exceeded our expectations. The attention to detail and creative execution helped us make a significant impact in the market."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://via.placeholder.com/50x50" alt="Michael Brown" class="rounded-circle">
+                                        <div>
+                                            <h5>Michael Brown</h5>
+                                            <p>Marketing Director, Innovate Inc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contactus" class="py-5 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Contact Us</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Get in touch to plan your next event</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="card h-100 contact-card">
+                            <div class="card-body p-4">
+                                <h4 class="mb-4">Send us a message</h4>
+                                <form id="contactForm">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label  text-danger">Your Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label  text-danger">Email Address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label  text-danger">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="eventType" class="form-label  text-danger">Event Type</label>
+                                        <select class="form-select" id="eventType">
+                                            <option selected>Select event type</option>
+                                            <option value="corporate">Corporate Event</option>
+                                            <option value="wedding">Wedding</option>
+                                            <option value="birthday">Birthday Party</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label  text-danger">Your Message</label>
+                                        <textarea class="form-control" id="message" rows="4"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left" data-aos-duration="1200">
+                        <div class="card h-100 contact-card">
+                            <div class="card-body p-4">
+                                <h4 class="mb-4">Contact Information</h4>
+                                <div class="d-flex mb-3 contact-info-item">
+                                    <i class="bi bi-geo-alt-fill me-3 fs-4"></i>
+                                    <div>
+                                        <h5 class="mb-1">Our Location</h5>
+                                        <p class="mb-0">123 Event Street, Celebration City, 12345</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3 contact-info-item">
+                                    <i class="bi bi-telephone-fill me-3 fs-4"></i>
+                                    <div>
+                                        <h5 class="mb-1">Phone Number</h5>
+                                        <p class="mb-0">+91 752 752 8433</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3 contact-info-item">
+                                    <i class="bi bi-envelope-fill me-3 fs-4"></i>
+                                    <div>
+                                        <h5 class="mb-1">Email Address</h5>
+                                        <p class="mb-0"><a href="mailto:info@culturevibe.com">info@culturevibe.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3 contact-info-item">
+                                    <i class="bi bi-clock-fill me-3 fs-4"></i>
+                                    <div>
+                                        <h5 class="mb-1">Working Hours</h5>
+                                        <p class="mb-0">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                        <p class="mb-0">Saturday: 10:00 AM - 4:00 PM</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <h5 class="mb-3">Follow Us</h5>
+                                    <div class="d-flex">
+                                        <a href="#" class="me-3 social-icon" aria-label="Facebook"><i class="bi bi-facebook fs-4"></i></a>
+                                        <a href="#" class="me-3 social-icon" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
+                                        <a href="#" class="me-3 social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
+                                        <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="py-0">
+            <div class="container-fluid p-0">
+                <div class="map-container">
+                    <iframe id="mapIframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2146408526257!2d-73.98784492439132!3d40.75798597138413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1710843394567!5m2!1sen!2sus"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Culture Vibe Events Location">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Culture Vibe Events</h4>
+                    <p>Creating memorable experiences for every occasion. Our team of professionals is dedicated to making your event a success.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#about" class="text-white">About</a></li>
+                        <li><a href="#services" class="text-white">Services</a></li>
+                        <li><a href="#gallery" class="text-white">Gallery</a></li>
+                        <li><a href="#testimonials" class="text-white">Testimonials</a></li>
+                        <li><a href="#contactus" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="text-white service-link" data-service="corporate">Corporate Events</a></li>
+                        <li><a href="#" class="text-white service-link" data-service="wedding">Weddings</a></li>
+                        <li><a href="#" class="text-white service-link" data-service="social">Social Gatherings</a></li>
+                        <li><a href="#" class="text-white service-link" data-service="entertainment">Entertainment</a></li>
+                        <li><a href="#" class="text-white service-link" data-service="photography">Photography</a></li>
+                        <li><a href="#" class="text-white service-link" data-service="catering">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="mt-3" id="newsletterForm">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2023 Culture Vibe Events. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label  text-danger">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label  text-danger">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label text-danger" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label  text-danger">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label  text-danger">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPhone" class="form-label  text-danger">Phone Number</label>
+                            <input type="tel" class="form-control" id="signupPhone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label  text-danger">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label  text-danger  text-danger">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="termsAgree" required>
+                            <label class="form-check-label text-danger" for="termsAgree">I agree to the <a href="#">Terms and Conditions</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p class="text-danger">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalLabel">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="galleryModalImage" src="/placeholder.svg" alt="Gallery Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Authentication Modal -->
+    <div class="modal fade" id="serviceAuthModal" tabindex="-1" aria-labelledby="serviceAuthModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceAuthModalLabel">Login Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger">To access detailed information about our services, please log in or create an account. (or) Skip</p>
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Login
+                        </button>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">
+                            <i class="bi bi-person-plus me-2"></i>Sign Up
+                        </button>
+                        <button id="skipAuthBtn" class="btn btn-secondary">
+                            <i class="bi bi-skip-forward me-2"></i>Skip
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
