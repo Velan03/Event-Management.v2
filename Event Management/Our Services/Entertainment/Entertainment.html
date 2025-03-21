@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Culture Events</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Entertainment.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tamil Culture Events</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#upcoming">Upcoming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12 text-center text-white">
+                    <h1 class="display-3 fw-bold mb-4" data-aos="fade-up">Experience the Richness of <span class="text-accent">Tamil Culture</span></h1>
+                    <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">Traditional Music, Dance, and Performances for Your Special Events</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#upcoming" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="upcoming" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col-lg-12">
+                    <h2 class="section-title" data-aos="fade-up">Next Featured Event</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Tamil New Year Celebration - April 14, 2025</p>
+                </div>
+            </div>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-8">
+                    <div class="countdown-container">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-title" data-aos="fade-up">Our Entertainment Services</h2>
+                    <p class="text-muted mx-auto" data-aos="fade-up" data-aos-delay="100">We offer authentic Tamil cultural performances to make your events memorable and culturally enriching.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Bharatanatyam Dance -->
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="card service-card h-100">
+                        <div class="service-img-container">
+                            <img src="./Entertainment/corporate-entertainment.webp" class="card-img-top" alt="Bharatanatyam Dance">
+                            <div class="service-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bharatanatyam Dance</h5>
+                            <p class="card-text">Experience the elegance of Bharatanatyam, a classical Tamil dance form known for its grace, precision, and storytelling.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-primary w-100">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Traditional Music -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card service-card h-100">
+                        <div class="service-img-container">
+                            <img src="./Entertainment/entertainment-event-management-services-1587973320-5393972.jpg" class="card-img-top" alt="Traditional Music">
+                            <div class="service-icon">
+                                <i class="fas fa-guitar"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Traditional Music</h5>
+                            <p class="card-text">Enjoy live performances of Tamil folk and classical music with authentic instruments and talented vocalists.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-primary w-100">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kolattam Performance -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card service-card h-100">
+                        <div class="service-img-container">
+                            <img src="./Entertainment/event-management-1024x682.webp" class="card-img-top" alt="Kolattam Performance">
+                            <div class="service-icon">
+                                <i class="fas fa-drum"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kolattam Performance</h5>
+                            <p class="card-text">Witness the vibrant and rhythmic Kolattam dance, a traditional folk art form performed with colorful sticks.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-primary w-100">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-title" data-aos="fade-up">Upcoming Events</h2>
+                    <p class="text-muted mx-auto" data-aos="fade-up" data-aos-delay="100">Join us for these upcoming celebrations of Tamil culture and tradition.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Event 1 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="card event-card h-100">
+                        <img src="./Entertainment/img-1.jpg" class="card-img-top" alt="Pongal Cultural Festival">
+                        <div class="card-body">
+                            <h5 class="card-title">Pongal Cultural Festival</h5>
+                            <div class="event-info mb-3">
+                                <div class="event-date">
+                                    <i class="far fa-calendar-alt me-2"></i>
+                                    <span>January 15, 2025</span>
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    <span>Tamil Cultural Center</span>
+                                </div>
+                            </div>
+                            <p class="card-text">Join us for a day of traditional celebrations, music, and dance performances.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-primary w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card event-card h-100">
+                        <img src="./Entertainment/rajasthani-folk-dance-ghoomar-1024x683.webp" class="card-img-top" alt="Classical Dance Competition">
+                        <div class="card-body">
+                            <h5 class="card-title">Classical Dance Competition</h5>
+                            <div class="event-info mb-3">
+                                <div class="event-date">
+                                    <i class="far fa-calendar-alt me-2"></i>
+                                    <span>February 28, 2025</span>
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    <span>City Convention Hall</span>
+                                </div>
+                            </div>
+                            <p class="card-text">Watch talented dancers compete in various classical Tamil dance forms.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-primary w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card event-card h-100">
+                        <img src="./Entertainment/fashion-week-1024x574.webp" class="card-img-top" alt="Tamil New Year Celebration">
+                        <div class="card-body">
+                            <h5 class="card-title">Tamil New Year Celebration</h5>
+                            <div class="event-info mb-3">
+                                <div class="event-date">
+                                    <i class="far fa-calendar-alt me-2"></i>
+                                    <span>April 14, 2025</span>
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    <span>Community Park</span>
+                                </div>
+                            </div>
+                            <p class="card-text">Celebrate Tamil New Year with cultural performances, traditional food, and festivities.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="#" class="btn btn-primary w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-title" data-aos="fade-up">Our Gallery</h2>
+                    <p class="text-muted mx-auto" data-aos="fade-up" data-aos-delay="100">Glimpses of our past performances and cultural events.</p>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4 col-6" data-aos="fade-up">
+                    <div class="gallery-item">
+                        <img src="./Entertainment/entertainment-event-management-services-1587973320-5393972.jpg" alt="Bharatanatyam Performance" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5>Bharatanatyam Performance</h5>
+                                <a href="./Entertainment/entertainment-event-management-services-1587973320-5393972.jpg" class="gallery-popup" data-caption="Bharatanatyam Performance">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="./Entertainment/corporate-entertainment.webp" alt="Traditional Music Concert" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5>Traditional Music Concert</h5>
+                                <a href="./Entertainment/corporate-entertainment.webp" class="gallery-popup" data-caption="Traditional Music Concert">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="./Entertainment/event-management-1024x682.webp" alt="Kolattam Dance" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5>Kolattam Dance</h5>
+                                <a href="./Entertainment/event-management-1024x682.webp" class="gallery-popup" data-caption="Kolattam Dance">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6" data-aos="fade-up">
+                    <div class="gallery-item">
+                        <img src="./Entertainment/Event-management.jpg" alt="Cultural Festival" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5>Cultural Festival</h5>
+                                <a href="./Entertainment/Event-management.jpg" class="gallery-popup" data-caption="Cultural Festival">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="./Entertainment/fashion-week-1024x574.webp" alt="Wedding Performance" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5>Wedding Performance</h5>
+                                <a href="./Entertainment/fashion-week-1024x574.webp" class="gallery-popup" data-caption="Wedding Performance">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="./Entertainment/rajasthani-folk-dance-ghoomar-1024x683.webp" alt="Corporate Event" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5>Corporate Event</h5>
+                                <a href="./Entertainment/rajasthani-folk-dance-ghoomar-1024x683.webp" class="gallery-popup" data-caption="Corporate Event">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+                    <p class="text-muted mx-auto" data-aos="fade-up" data-aos-delay="100">Hear from those who have experienced our cultural performances.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-8">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-icon mb-4">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text mb-4">The Bharatanatyam performance at our client's wedding was absolutely mesmerizing. The dancers were professional, and the choreography was beautiful. Our clients were thrilled!</p>
+                                    <div class="testimonial-author">
+                                        <img src="./Entertainment/proflie/img1.jpg" alt="Priya Raman" class="testimonial-img">
+                                        <h5 class="mt-3 mb-0">Priya Raman</h5>
+                                        <p class="text-muted">Wedding Planner</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-icon mb-4">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text mb-4">We hired Tamil Culture Events for our company's annual celebration, and they delivered beyond our expectations. The traditional music performance created the perfect atmosphere.</p>
+                                    <div class="testimonial-author">
+                                        <img src="./Entertainment/proflie/img2.jpg" alt="Rajesh Kumar" class="testimonial-img">
+                                        <h5 class="mt-3 mb-0">Rajesh Kumar</h5>
+                                        <p class="text-muted">Corporate Event Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-item text-center">
+                                    <div class="testimonial-icon mb-4">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text mb-4">The Kolattam performance was the highlight of our cultural festival. The energy and precision of the dancers captivated our audience. We'll definitely work with them again!</p>
+                                    <div class="testimonial-author">
+                                        <img src="./Entertainment/proflie/img3.avif" alt="Anita Venkat" class="testimonial-img">
+                                        <h5 class="mt-3 mb-0">Anita Venkat</h5>
+                                        <p class="text-muted">Festival Organizer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls mt-4">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                                <i class="fas fa-chevron-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                                <i class="fas fa-chevron-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+                    <p class="text-muted mx-auto" data-aos="fade-up" data-aos-delay="100">Interested in our services? Get in touch with us to discuss your event needs.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+                    <div class="contact-form-container p-4 rounded shadow-sm">
+                        <h3 class="mb-4">Get In Touch</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Your phone number">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" id="submitBtn">
+                                <span id="submitText">Send Message</span>
+                                <span id="submitSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-container p-4 rounded shadow-sm h-100">
+                        <h3 class="mb-4">Our Information</h3>
+                        <div class="contact-info-item mb-4">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h5>Phone</h5>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item mb-4">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h5>Email</h5>
+                                <p>info@tamilcultureevents.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item mb-4">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h5>Location</h5>
+                                <p>123 Cultural Avenue, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h5>Business Hours</h5>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Tamil Culture Events</h5>
+                    <p class="text-white-50 mb-4">Bringing the rich heritage of Tamil culture to your special events through authentic performances and experiences.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Bharatanatyam</a></li>
+                        <li><a href="#">Traditional Music</a></li>
+                        <li><a href="#">Kolattam</a></li>
+                        <li><a href="#">Wedding Performances</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p class="text-white-50 mb-4">Subscribe to our newsletter for updates on upcoming events and performances.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="footer-bottom text-center">
+                        <div class="copyright">
+                            <p class="text-white-50">&copy; <span id="currentYear"></span> Tamil Culture Events. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Modal for Gallery Images -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalLabel">Image Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./Entertainment/img-1.jpg" id="galleryModalImage" class="img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message Sent!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-check-circle text-success fa-4x mb-3"></i>
+                        <p>Thank you for contacting us. We'll get back to you soon!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="Entertainment.js"></script>
+</body>
+</html>
